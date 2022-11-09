@@ -1,0 +1,103 @@
+<wm-page pagetitle="Product Details" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="productdetails">
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="6" name="HeadingProduct">
+                        <wm-label padding="unset 0.5em" name="productheading" caption="Products" fontsize="25" color="#3a0ea0"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="AddProduct">
+                        <wm-button class="btn-info" caption="Add Product" type="button" margin="0.5em 0.5em unset 25em" name="addproduct" iconclass="wi wi-add" on-click="Widgets.ProductAdd.open()" accessroles="Admin"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-nav type="pills" autoclose="outsideClick" name="nav1" dataset="bind:Variables.dvGetAllCategory.dataSet" itemlabel="name" isactive="name" orderby="name:desc" on-select="nav1Select($event, widget, $item)"></wm-nav>
+            <wm-list listclass="list-group" template="true" template-name="I Card" itemsperrow="xs-1 sm-2 md-3 lg-3" class="list-card" statehandler="URL" name="ProductList1" dataset="bind:Variables.dvGetBasedonCategory.dataSet" navigation="Basic">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-card name="Picture">
+                        <wm-card-content name="card_content1">
+                            <wm-picture resizemode="contain" name="ProductImage" width="100%" picturesource="bind:Variables.dvGetBasedonCategory.dataSet[$i].image" height="150px"></wm-picture>
+                            <wm-label padding="unset 0.5em" name="label9" caption=""></wm-label>
+                            <wm-label caption="bind:Variables.dvGetBasedonCategory.dataSet[$i].name" name="Name" margin="0px unset unset unset" class="h4" whitespace="nowrap"></wm-label>
+                            <wm-layoutgrid columns="2" name="layoutgrid1">
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn colwidth="6" columnwidth="4" horizontalalign="left" name="gridcolumn1">
+                                        <wm-label padding="unset 0.5em" name="label6" caption="Price"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn2" columnwidth="8">
+                                        <wm-label name="ID" caption="bind:Variables.dvGetBasedonCategory.dataSet[$i].price" fontunit="em" class="text-muted p" whitespace="nowrap"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow2">
+                                    <wm-gridcolumn colwidth="6" columnwidth="4" horizontalalign="left" name="gridcolumn3">
+                                        <wm-label padding="unset 0.5em" name="label7" caption="About"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn4" columnwidth="8">
+                                        <wm-label name="JobTitle" caption="bind:Variables.dvGetBasedonCategory.dataSet[$i].description" fontunit="em" class="text-muted p"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow3">
+                                    <wm-gridcolumn colwidth="6" columnwidth="4" horizontalalign="left" name="gridcolumn5">
+                                        <wm-label padding="unset 0.5em" name="label8" caption="category"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn6" columnwidth="8">
+                                        <wm-label name="Department" caption="bind:Variables.dvGetBasedonCategory.dataSet[$i].category.name" fontunit="em" class="text-muted"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer1">
+                            <wm-buttongroup class="btn-group-justified" horizontalalign="center" name="buttongroup1">
+                                <wm-anchor class="btn btn-transparent" caption="Add To Cart" iconclass="wi wi-add-circle fa-2x" name="anchor3" fontsize="15" color="#ce7133" on-click="Variables.dbAddProductToSale.createRecord()"></wm-anchor>
+                            </wm-buttongroup>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Add Product" iconclass="wi wi-add-box" name="ProductAdd">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button2"></wm-button>
+        </wm-dialogactions>
+        <wm-liveform errormessage="" title="" defaultmode="Edit" dataset="bind:Variables.RetailshopmainProductData.dataSet" captionalign="left" captionposition="left" name="ProductLiveForm1" on-result="Widgets.ProductAdd.close()" on-success="Variables.RetailshopmainProductData.listRecords()">
+            <wm-layoutgrid columns="1" name="layoutgrid4">
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                        <wm-form-field name="name" displayname="Name" required="true" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" tablet-display="true"
+                            widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                        <wm-form-field name="image" displayname="Image" required="false" show="true" generator="assigned" primary-key="false" key="image" type="blob" is-related="false" pc-display="true" mobile-display="true" tablet-display="true" widget="upload"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                        <wm-form-field name="description" displayname="Description" required="false" show="true" generator="assigned" primary-key="false" key="description" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            tablet-display="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn17">
+                        <wm-form-field name="price" displayname="Price" required="true" show="true" generator="assigned" primary-key="false" key="price" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" tablet-display="true"
+                            widget="number"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn18">
+                        <wm-form-field name="category" displayname="Category" required="true" show="true" generator="assigned" primary-key="false" key="categoryId" type="list" is-related="true" pc-display="true" mobile-display="true" tablet-display="true"
+                            widget="select" dataset="bind:Variables.dvGetAllCategory.dataSet" datafield="id" displayfield="name" orderby="name:desc" placeholder="Select Category"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" tablet-display="true" widget="number"></wm-form-field>
+            <wm-form-action key="reset" class="form-reset btn-default" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-dialog>
+</wm-page>

@@ -1,0 +1,72 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Dashboard",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ProductDetails",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "sale_id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "Products",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Purchases",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Sales",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "UserDetails",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "UserDues",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "UserPurchases",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Vendors",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+} ]

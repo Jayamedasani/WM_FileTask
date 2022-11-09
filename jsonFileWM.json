@@ -1,0 +1,208 @@
+[ {
+  "_id" : "wm-RetailshopmainInventoryData2-wm.LiveVariable-1664267258629",
+  "name" : "RetailshopmainInventoryData2",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Inventory",
+  "tableName" : "inventory",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainInventoryData-wm.LiveVariable-1664260062849",
+  "name" : "RetailshopmainInventoryData",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Inventory",
+  "tableName" : "inventory",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainInventoryData3-wm.LiveVariable-1664268632144",
+  "name" : "RetailshopmainInventoryData3",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Inventory",
+  "tableName" : "inventory",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainInventoryData1-wm.LiveVariable-1664261396141",
+  "name" : "RetailshopmainInventoryData1",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Inventory",
+  "tableName" : "inventory",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainVendorData1-wm.LiveVariable-1664261035004",
+  "name" : "RetailshopmainVendorData1",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Vendor",
+  "tableName" : "vendor",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainVendorData-wm.LiveVariable-1664259984832",
+  "name" : "RetailshopmainVendorData",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Vendor",
+  "tableName" : "vendor",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-dvGetUserDues-wm.LiveVariable-1664312036893",
+  "name" : "dvGetUserDues",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Sale",
+  "tableName" : "sale",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainCategoryData-wm.LiveVariable-1664222025627",
+  "name" : "RetailshopmainCategoryData",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Category",
+  "tableName" : "category",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainCategoryData2-wm.LiveVariable-1664256437955",
+  "name" : "RetailshopmainCategoryData2",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Category",
+  "tableName" : "category",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainCategoryData1-wm.LiveVariable-1664255693872",
+  "name" : "RetailshopmainCategoryData1",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Category",
+  "tableName" : "category",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-dvGetAllCategory-wm.LiveVariable-1664223266393",
+  "name" : "dvGetAllCategory",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Category",
+  "tableName" : "category",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainProductData-wm.LiveVariable-1664276047770",
+  "name" : "RetailshopmainProductData",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Product",
+  "tableName" : "product",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-dbAddProductToSale-wm.LiveVariable-1664289132834",
+  "name" : "dbAddProductToSale",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.SaleDetail",
+  "tableName" : "sale_detail",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-dvAddProduct-wm.LiveVariable-1664275826355",
+  "name" : "dvAddProduct",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Product",
+  "tableName" : "product",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-dvGetBasedonCategory-wm.LiveVariable-1664274172001",
+  "name" : "dvGetBasedonCategory",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Product",
+  "tableName" : "product",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-SaleData-wm.LiveVariable-1664288865474",
+  "name" : "SaleData",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Sale",
+  "tableName" : "sale",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-dvGetAllSales-wm.LiveVariable-1664333070082",
+  "name" : "dvGetAllSales",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Sale",
+  "tableName" : "sale",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-getSaleDetailDataForProduct-wm.LiveVariable-1664289318295",
+  "name" : "getSaleDetailDataForProduct",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.SaleDetail",
+  "tableName" : "sale_detail",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainPersonData4-wm.LiveVariable-1664267167211",
+  "name" : "RetailshopmainPersonData4",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Person",
+  "tableName" : "person",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainPersonData3-wm.LiveVariable-1664260947133",
+  "name" : "RetailshopmainPersonData3",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Person",
+  "tableName" : "person",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainPersonData2-wm.LiveVariable-1664260867963",
+  "name" : "RetailshopmainPersonData2",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Person",
+  "tableName" : "person",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainPersonData1-wm.LiveVariable-1664260506639",
+  "name" : "RetailshopmainPersonData1",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Person",
+  "tableName" : "person",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-RetailshopmainPersonData-wm.LiveVariable-1664222631968",
+  "name" : "RetailshopmainPersonData",
+  "owner" : "Page",
+  "packageName" : "com.retailstore.retailshopmain.Person",
+  "tableName" : "person",
+  "tableType" : "TABLE",
+  "liveSource" : "retailshopmain",
+  "maxResults" : 20
+}

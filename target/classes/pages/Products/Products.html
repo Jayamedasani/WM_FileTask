@@ -1,0 +1,53 @@
+<wm-page pagetitle="Products" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="productcategory">
+            <wm-layoutgrid name="categoryheading">
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                        <wm-label padding="unset 0.5em" name="label2" caption="Categories" fontsize="30" color="#273495"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                        <wm-button class="btn-default btn-info" caption="Add Category" type="button" margin="0.5em 0.5em unset 25em" name="categoryadd" iconclass="wi wi-add" on-click="Widgets.Categoryadddialog.open()" accessroles="Admin"></wm-button>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-list listclass="list-group" itemsperrow="xs-2 sm-3 md-4 lg-4" template="true" template-name="Designation Card" class="list-card" statehandler="URL" name="CategoryList1" dataset="bind:Variables.RetailshopmainCategoryData1.dataSet" navigation="Basic">
+                <wm-listtemplate layout="media" name="listtemplate2">
+                    <wm-card name="Picture">
+                        <wm-card-content name="card_content2">
+                            <wm-picture resizemode="cover" name="picture2" width="100%" picturesource="bind:Variables.RetailshopmainCategoryData1.dataSet[$i].image" height="150px" on-click="Actions.goToPage_ProductDetails.invoke()"></wm-picture>
+                            <wm-label name="Name" class="h4" margin="0px unset" caption="bind:Variables.RetailshopmainCategoryData1.dataSet[$i].name" whitespace="nowrap"></wm-label>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Add Category" iconclass="wi wi-add-box" name="Categoryadddialog">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button2"></wm-button>
+        </wm-dialogactions>
+        <wm-liveform errormessage="" title="" defaultmode="Edit" dataset="bind:Variables.RetailshopmainCategoryData2.dataSet" captionalign="left" captionposition="left" name="CategoryLiveForm1" on-success="Variables.RetailshopmainCategoryData.listRecords()"
+            on-result="Widgets.Categoryadddialog.close()">
+            <wm-layoutgrid columns="1" name="layoutgrid3">
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                        <wm-form-field name="name" displayname="Name" required="true" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" tablet-display="true"
+                            widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                        <wm-form-field name="image" displayname="Image" required="false" show="true" generator="assigned" primary-key="false" key="image" type="blob" is-related="false" pc-display="true" mobile-display="true" tablet-display="true" widget="upload"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" tablet-display="true" widget="number"></wm-form-field>
+            <wm-form-action key="reset" class="form-reset btn-default" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-dialog>
+</wm-page>

@@ -1,0 +1,89 @@
+<wm-page name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn4" padding=".5em">
+                        <wm-tile name="summaryOne" padding="3em 1em" class="bg-danger">
+                            <wm-layoutgrid name="layoutgrid2">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn columnwidth="3" name="gridcolumn11" horizontalalign="center" class="col-xs-3">
+                                        <wm-icon name="globeIcon" iconclass="wi wi-shopping-basket fa-3x"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="9" name="gridcolumn12" class="col-xs-9" padding="unset unset unset 1em">
+                                        <wm-label name="categoryLabel" width="100%" caption="Total Categories" class="text-uppercase p"></wm-label>
+                                        <wm-label width="100%" name="categorycount" caption="bind:Variables.svGetCountCategory.dataSet.value" class="h3 p" margin="0px" color="#f41313"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn5" padding=".5em">
+                        <wm-tile name="summaryTwo" padding="3em 1em" class="bg-info">
+                            <wm-layoutgrid name="layoutgrid3">
+                                <wm-gridrow name="gridrow7">
+                                    <wm-gridcolumn columnwidth="3" horizontalalign="center" name="gridcolumn20" class="col-xs-3">
+                                        <wm-icon name="usdLabel" iconclass="wi wi-gift fa-3x"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="9" name="gridcolumn21" class="col-xs-9" padding="unset unset unset 1em">
+                                        <wm-label width="100%" caption="Total Products" class="text-uppercase" name="revenueLabel"></wm-label>
+                                        <wm-label width="100%" caption="bind:Variables.svGetCountProduct.dataSet.value" class="h3" name="revenueValueLabel" margin="0px" color="#4e7bdf"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn6" padding=".5em">
+                        <wm-tile name="summaryThree" padding="3em 1em" class="bg-warning">
+                            <wm-layoutgrid name="layoutgrid4">
+                                <wm-gridrow name="gridrow8">
+                                    <wm-gridcolumn columnwidth="3" horizontalalign="center" name="gridcolumn22" class="col-xs-3">
+                                        <wm-icon name="userIcon" iconclass="wi wi-user fa-3x"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="9" name="gridcolumn23" class="col-xs-9" padding="unset unset unset 1em">
+                                        <wm-label width="100%" caption="Total Users" class="text-uppercase" name="outpatientsLabel"></wm-label>
+                                        <wm-label width="100%" caption="bind:Variables.svGetPersonCount.dataSet.value" class="h3" name="outpatientsValueLabel" margin="0px" color="#df9c55"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn10" padding=".5em">
+                        <wm-tile name="summaryFour" padding="3em 1em" class="bg-success">
+                            <wm-layoutgrid name="layoutgrid5">
+                                <wm-gridrow name="gridrow9">
+                                    <wm-gridcolumn columnwidth="3" horizontalalign="center" name="gridcolumn24" class="col-xs-3">
+                                        <wm-icon name="checkIcon" iconclass="wi wi-people-outline fa-3x"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="9" name="gridcolumn25" class="col-xs-9" padding="unset unset unset 1em">
+                                        <wm-label width="100%" caption="Total Vendors" class="text-uppercase" name="vendorsLabel"></wm-label>
+                                        <wm-label width="100%" caption="bind:Variables.svGetVendorCount.dataSet.value" class="h3" name="admissionsValueLabel" margin="0px" color="#3aa242"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn7" padding="1em .5em">
+                        <wm-panel collapsible="false" showheader="true" name="topDepartmentsByRevenuePanel" title="Monthly Purchases" height="500px" margin="0px" iconclass="fa fa-external-link-square">
+                            <wm-chart type="Column" name="topDepartmentsByRevenueChart" offsetright="25" tooltips="true" showlegend="false" xaxislabel="Month Number" yaxislabel="Purchase Amount" yaxislabeldistance="12" theme="Retro" height="400px" dataset="bind:Variables.svGetMonthlyExpenditure.dataSet"
+                                xaxisdatakey="month_processedDate_" yaxisdatakey="sum_amount_"></wm-chart>
+                        </wm-panel>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow9_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn21_1" padding="1em .5em">
+                        <wm-panel collapsible="false" showheader="true" name="inPatientOutPatientEnrollmentsPanel" actions="Refresh, Change Date Range, Settings" title="" height="450px" margin="0px">
+                            <wm-chart type="Column" title="Sales Chart" height="400px" iconclass="wi wi-bar-chart" name="chart3" dataset="bind:Variables.svGetMonthlyIncome.dataSet" xaxisdatakey="month_processedDate_" yaxisdatakey="sum_amount_" xaxislabel="Month Number"
+                                yaxislabel="Sales Amount" formattype="integer"></wm-chart>
+                        </wm-panel>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

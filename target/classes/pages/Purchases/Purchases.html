@@ -1,0 +1,52 @@
+<wm-page pagetitle="Purchases" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="purchase">
+            <wm-livetable formlayout="dialog" name="InventoryLiveTable1">
+                <wm-table gridfirstrowselect="true" editmode="dialog" statehandler="URL" name="InventoryTable1" title="Inventory List" dataset="bind:Variables.RetailshopmainInventoryData3.dataSet" navigation="Basic">
+                    <wm-table-column binding="amount" caption="Amount" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="integer"></wm-table-column>
+                    <wm-table-column binding="processedDate" caption="Processed Date" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="date"></wm-table-column>
+                    <wm-table-column binding="product.name" caption="Product Name" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Product" readonly="true"></wm-table-column>
+                    <wm-table-column binding="vendor.name" caption="Vendor Name" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string" related-entity-name="Vendor" readonly="true"></wm-table-column>
+                    <wm-table-action widget-type="button" key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action>
+                    <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action>
+                    <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action>
+                </wm-table>
+                <wm-liveform errormessage="" title="Inventory Info" formlayout="dialog" iconclass="wi wi-edit" name="InventoryLiveForm1" dataset="bind:Variables.RetailshopmainInventoryData3.dataSet" captionalign="left" captionposition="left">
+                    <wm-layoutgrid columns="1" name="layoutgrid2">
+                        <wm-gridrow name="gridrow5">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                                <wm-form-field name="amount" displayname="Amount" show="true" primary-key="false" generator="assigned" key="amount" type="integer" readonly="false" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow6">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                                <wm-form-field name="processedDate" displayname="Processed Date" show="true" primary-key="false" generator="assigned" key="processedDate" type="date" readonly="false" required="true" widget="date" datepattern="MMM d, y" placeholder="Select date"
+                                    outputformat="yyyy-MM-dd"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow7">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                <wm-form-field name="product" displayname="Product" show="true" primary-key="false" generator="assigned" key="product" type="list" is-related="true" readonly="false" required="true" widget="select" matchmode="startignorecase"
+                                    placeholder="Select value" filterexpressions="{&quot;condition&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;&quot;,&quot;type&quot;:&quot;string&quot;,&quot;matchMode&quot;:&quot;anywhereignorecase&quot;,&quot;value&quot;:&quot;&quot;,&quot;required&quot;:false}]}"
+                                    displayexpression="name"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow8">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                <wm-form-field name="vendor" displayname="Vendor" show="true" primary-key="false" generator="assigned" key="vendor" type="list" is-related="true" readonly="false" required="true" widget="select" matchmode="startignorecase"
+                                    placeholder="Select value" filterexpressions="{&quot;condition&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;&quot;,&quot;type&quot;:&quot;string&quot;,&quot;matchMode&quot;:&quot;anywhereignorecase&quot;,&quot;value&quot;:&quot;&quot;,&quot;required&quot;:false}]}"
+                                    displayexpression="name"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-default" iconclass="wi wi-cancel" title="Cancel" action="cancel()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+            </wm-livetable>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

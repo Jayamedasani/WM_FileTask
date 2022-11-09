@@ -1,0 +1,28 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Dashboard" name="dashboardLink" iconclass="wi wi-bar-graph" on-click="Actions.goToPage_Dashboard.invoke()" accessroles="admin,Admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order">
+            <wm-anchor caption="Categories" name="category" iconclass="fa fa-shopping-cart" on-click="Actions.goToPage_Products.invoke()" accessroles="Authenticated"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_inventory">
+            <wm-anchor caption="Products" name="productLink" iconclass="wm-sl-l sl-module-1" on-click="Actions.goToPage_ProductDetails.invoke()" accessroles="Authenticated"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Vendors" name="vendorLink" iconclass="fa fa-users" on-click="Actions.goToPage_Vendors.invoke()" accessroles="admin,Admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Users" name="userLink" iconclass="fa fa-male" on-click="Actions.goToPage_UserDetails.invoke()" accessroles="admin,Admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Sales" name="salesLink" iconclass="fa fa-money" on-click="Actions.goToPage_Sales.invoke()" accessroles="Authenticated"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Purchases" name="purchaseLink" iconclass="fa fa-paper-plane" on-click="Actions.goToPage_Purchases.invoke()" accessroles="admin,Admin"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="User Dues" name="purchaseLink" iconclass="fa fa-minus-circle" on-click="Actions.goToPage_UserDues.invoke()" accessroles="user,User"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>
