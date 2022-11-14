@@ -5,30 +5,31 @@ import com.fasterxml.jackson.databind.SequenceWriter;
 import org.example.model.JSONWMVariable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-@Component
-public class FileWriterJSON {
-    private static FileWriterJSON fileWriterJSON;
+public class FileWriterServiceVariableJSON {
+    private static FileWriterServiceVariableJSON fileWriterJSON;
     private static SequenceWriter sequenceWriter;
-    private static ObjectMapper objectMapper = new ObjectMapper();
-    private static Logger logger = LoggerFactory.getLogger(FileWriterJSON.class);
-    private FileWriterJSON() {
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final Logger logger = LoggerFactory.getLogger(FileWriterLiveVariableJSON.class);
+
+    private FileWriterServiceVariableJSON() {
     }
-    public static FileWriterJSON getInstance() {
+
+    public static FileWriterServiceVariableJSON getInstance() {
         try {
             if (fileWriterJSON == null) {
-                sequenceWriter = objectMapper.writerWithDefaultPrettyPrinter().writeValuesAsArray(new FileWriter("jsonFileWM.json"));
-                fileWriterJSON = new FileWriterJSON();
+                sequenceWriter = objectMapper.writerWithDefaultPrettyPrinter().writeValuesAsArray(new FileWriter("jsonFileWMServiceVariable.json"));
+                fileWriterJSON = new FileWriterServiceVariableJSON();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return fileWriterJSON;
     }
+
     public synchronized void writeJsonFile(JSONWMVariable jsonwmVariable) {
         try {
             sequenceWriter.write(jsonwmVariable);

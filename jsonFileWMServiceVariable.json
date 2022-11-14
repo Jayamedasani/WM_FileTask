@@ -1,0 +1,41 @@
+[ {
+  "_id" : "wm-svGetUserDues-wm.ServiceVariable-1664311736334",
+  "name" : "svGetUserDues",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetCountProduct-wm.ServiceVariable-1664257733658",
+  "name" : "svGetCountProduct",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetMonthlyIncome-wm.ServiceVariable-1664306808475",
+  "name" : "svGetMonthlyIncome",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetCountCategory-wm.ServiceVariable-1664257490448",
+  "name" : "svGetCountCategory",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetPersonCount-wm.ServiceVariable-1664257899398",
+  "name" : "svGetPersonCount",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetVendorCount-wm.ServiceVariable-1664258503608",
+  "name" : "svGetVendorCount",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetMonthlyExpenditure-wm.ServiceVariable-1664305307516",
+  "name" : "svGetMonthlyExpenditure",
+  "owner" : "Page",
+  "maxResults" : 20
+}, {
+  "_id" : "wm-svGetDueSales-wm.ServiceVariable-1664291955454",
+  "name" : "svGetDueSales",
+  "owner" : "Page",
+  "maxResults" : 20
+}
