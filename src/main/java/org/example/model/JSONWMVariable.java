@@ -1,9 +1,13 @@
 package org.example.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import org.example.deserializer.CustomDeserializer;
+
 import java.util.Objects;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonDeserialize(using = CustomDeserializer.class)
 public class JSONWMVariable {
     private Object _id;
     private Object name;

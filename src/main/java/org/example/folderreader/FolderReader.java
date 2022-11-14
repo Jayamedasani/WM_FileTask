@@ -1,26 +1,30 @@
 package org.example.folderreader;
 import org.example.constants.FileType;
 import org.example.filereader.FileReaderJSON;
+import org.example.filewriter.FileWriterJSON;
+import org.example.model.JSONWMVariable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.io.File;
+import java.util.List;
+
 @Component
 public class FolderReader {
-    private Logger logger= LoggerFactory.getLogger(FolderReader.class);
-//    FileReaderJSON fileReaderJSON=new FileReaderJSON();
     @Autowired
     FileReaderJSON fileReaderJSON;
-    public void getFileFromFolder(File folderName) {
-        synchronized (this) {
+    private Logger logger= LoggerFactory.getLogger(FolderReader.class);
+    public synchronized void readFolder(File folderName) {
             for (File file : folderName.listFiles()) {
                 if (file.isDirectory()) {
-                    getFileFromFolder(file);
-                } else if ((file.getName().substring(file.getName().lastIndexOf(".") + 1).toLowerCase()).equals(FileType.FILE_TYPE.getName())) {
-                    fileReaderJSON.readJsonFile(file);
+                    readFolder(file);
+                } else if ((file.getName().substring(file.getName().lastIndexOf(".") + 1).toLowerCase()).equalsIgnoreCase(String.valueOf(FileType.JSON))){
+                    List<JSONWMVariable> jsonwmVariableList = fileReaderJSON.readJsonFile(file);
+                   for(JSONWMVariable jsonwmVariable:jsonwmVariableList) {
+                        FileWriterJSON.getInstance().writeJsonFile(jsonwmVariable);
+                    }
                 }
             }
-        }
     }
 }
